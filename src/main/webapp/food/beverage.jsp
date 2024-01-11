@@ -10,38 +10,50 @@
 <body>
 	<div class="wrapper">
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order7.food" method="post" name="콜라" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage1.png" class="food__img">
        			<div class="food__name">콜라</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order7.food" method="post" name="제로콜라" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage2.png" class="food__img">
-        		<div class="food__name">제로 콜라</div>
+        		<div class="food__name">제로콜라</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order7.food" method="post" name="스프라이트" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage3.png" class="food__img">
         		<div class="food__name">스프라이트</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
+        		</button>
+        	</form>
 		</div>
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order7.food" method="post" name="환타" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage4.png" class="food__img">
         		<div class="food__name">환타</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order7.food" method="post" name="소다" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage5.png" class="food__img">
         		<div class="food__name">소다</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order7.food" method="post" name="핫식스" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/beverage6.png" class="food__img">
         		<div class="food__name">핫식스</div>
         		<div class="food__cost">2,000원</div>
-        	</div>
+        		</button>
+        	</form>
 		</div>
 	</div>
 </body>

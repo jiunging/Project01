@@ -10,38 +10,50 @@
 <body>
 	<div class="wrapper">
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order2.food" method="post" name="모둠꼬치" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/stick1.png" class="food__img">
-       			<div class="food__name">모둠 꼬치</div>
-        		<div class="food__cost">30,000원</div>
-        	</div>
-        	<div class="food_list">
+       			<div class="food__name">모둠꼬치</div>
+        		<div class="food__cost">50,000원</div>
+        		</button>
+        	</form>
+        	<form action="../order/order2.food" method="post" name="가지꼬치" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/stick2.png" class="food__img">
-        		<div class="food__name">가지 꼬치</div>
-        		<div class="food__cost">16,000원</div>
-        	</div>
-        	<div class="food_list">
+        		<div class="food__name">가지꼬치</div>
+        		<div class="food__cost">10,000원</div>
+        		</button>
+        	</form>
+        	<form action="../order/order2.food" method="post" name="감자꼬치" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/stick3.png" class="food__img">
-        		<div class="food__name">감자 꼬치</div>
-        		<div class="food__cost">12,000원</div>
-        	</div>
+        		<div class="food__name">감자꼬치</div>
+        		<div class="food__cost">10,000원</div>
+        		</button>
+        	</form>
 		</div>
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order2.food" method="post" name="항정살꼬치" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/stick4.png" class="food__img">
-        		<div class="food__name">버섯 꼬치</div>
-        		<div class="food__cost">25,000원</div>
-        	</div>
-        	<div class="food_list">
+        		<div class="food__name">항정살꼬치</div>
+        		<div class="food__cost">12,000원</div>
+        		</button>
+        	</form>
+        	<form action="../order/order2.food" method="post" name="" class="food_list">
+        		<button style="border:none;">
         		<!--<img src="" class="food__img">-->
         		<div class="food__name"></div>
         		<div class="food__cost"></div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order2.food" method="post" name="" class="food_list">
+        		<button style="border:none;">
         		<!--<img src="" class="food__img">-->
         		<div class="food__name"></div>
         		<div class="food__cost"></div>
-        	</div>
+        		</button>
+        	</form>
 		</div>
 	</div>
 </body>

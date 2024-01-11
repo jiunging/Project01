@@ -43,6 +43,9 @@
 								<a href="${pageContext.request.contextPath }/login/mypage.user">
 									<button class="header__right__mypage">마이페이지</button>
 								</a>
+								<a href="${pageContext.request.contextPath }/order/basket.food">
+									<button class="header__right__basket">장바구니</button>
+								</a>
 								<a href="${pageContext.request.contextPath }/login/logout.user">
 									<button class="header__right__logout">로그아웃</button>
 								</a>

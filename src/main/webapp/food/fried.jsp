@@ -10,38 +10,50 @@
 <body>
 	<div class="wrapper">
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order5.food" method="post" name="후라이드치킨" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/fried1.png" class="food__img">
-       			<div class="food__name">후라이드 치킨</div>
-        		<div class="food__cost">26,000원</div>
-        	</div>
-        	<div class="food_list">
+       			<div class="food__name">후라이드치킨</div>
+        		<div class="food__cost">24,000원</div>
+        		</button>
+        	</form>
+        	<form action="../order/order5.food" method="post" name="양념치킨" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/fried2.png" class="food__img">
-        		<div class="food__name">양념 치킨</div>
+        		<div class="food__name">양념치킨</div>
         		<div class="food__cost">26,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order5.food" method="post" name="간장마늘치킨" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/fried3.png" class="food__img">
-        		<div class="food__name">간장 마늘 치킨</div>
+        		<div class="food__name">간장마늘치킨</div>
         		<div class="food__cost">26,000원</div>
-        	</div>
+        		</button>
+        	</form>
 		</div>
 		<div class="wrapper__body">
-        	<div class="food_list">
+        	<form action="../order/order5.food" method="post" name="현무암치킨" class="food_list">
+        		<button style="border:none;">
         		<img src="../image/fried4.png" class="food__img">
-        		<div class="food__name">현무암 치킨</div>
+        		<div class="food__name">현무암치킨</div>
         		<div class="food__cost">48,000원</div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order5.food" method="post" name="" class="food_list">
+        		<button style="border:none;">
         		<!--<img src="" class="food__img">-->
         		<div class="food__name"></div>
         		<div class="food__cost"></div>
-        	</div>
-        	<div class="food_list">
+        		</button>
+        	</form>
+        	<form action="../order/order5.food" method="post" name="" class="food_list">
+        		<button style="border:none;">
         		<!--<img src="" class="food__img">-->
         		<div class="food__name"></div>
         		<div class="food__cost"></div>
-        	</div>
+        		</button>
+        	</form>
 		</div>
 	</div>
 </body>

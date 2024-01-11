@@ -162,11 +162,24 @@ html, body{
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	width: 400px;
+	width: 100%;
 	height: 100%;
 }
 
 .header__right__mypage{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 50px;
+	border: 1px solid antiquewhite;
+	border-radius: 9px;
+	background-color: #298eb5;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.header__right__basket{
 	display: flex;
 	align-items: center;
 	justify-content: center;
