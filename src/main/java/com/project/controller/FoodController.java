@@ -1,6 +1,7 @@
 package com.project.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -149,8 +150,15 @@ public class FoodController extends HttpServlet {
 			
 		}else if(path.equals("/order/deleteForm.food")) {
 			service.order(request, response);
+			response.setContentType("text/html; charset=UTF-8");
+			
+			PrintWriter out = response.getWriter();
+			out.println("<script>");
+			out.println("alert('주문이 성공적으로 접수되었습니다.');");
+			out.println("location.href='../order/main.jsp';");
+			out.println("</script>");
 			System.out.println("delete controller 동작");
-			response.sendRedirect("../order/main.jsp");
+			/* response.sendRedirect("../order/main.jsp"); */
 		}
 
 	}

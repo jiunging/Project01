@@ -121,6 +121,8 @@ public class UserController extends HttpServlet {
 			System.out.println(result);
 			
 			if(result == 1) {
+				HttpSession session = request.getSession();
+				session.invalidate();
 				response.setContentType("text/html; charset=UTF-8");
 				
 				PrintWriter out = response.getWriter();
@@ -129,7 +131,7 @@ public class UserController extends HttpServlet {
 				out.println("location.href='../index.jsp';");
 				out.println("</script>");
 			}else {
-				request.setAttribute("msg", "메세지를 확인하세요");
+				request.setAttribute("msg", "비밀번호를 확인하세요");
 				request.getRequestDispatcher("user_delete.jsp").forward(request, response);
 			}
 		}

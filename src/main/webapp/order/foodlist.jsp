@@ -12,17 +12,14 @@
 <body>
 	<div class="background">
 		<div class="outerbox">
-			<form action="" method="post" class="wrapper">
+			<form action="deleteForm.food" method="post" class="wrapper">
 				<div class="wrapper__left">
 					<div class="wrapper__left__top">
 						<div class="left__top__title">
 							<div class="top__title__name"><a href="${pageContext.request.contextPath }/order/main.jsp">장바구니</a></div>
 						</div>
 						<div class="left__top__button">
-							<a href="deleteForm.food">
-								<input type="submit" class="top_button" >주문하기
-							</a>
-							<button class="top_button">취소하기</button>
+							<button type="submit" class="top_button" >주문하기</button>
 						</div>
 					</div>
 					<div class="divideLine"></div>
