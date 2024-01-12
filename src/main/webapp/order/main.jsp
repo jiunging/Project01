@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=], initial-scale=1.0">
 <meta charset="UTF-8">
 <title>주문화면</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/main.css?after">
@@ -52,7 +51,7 @@
 					<div class="wrapper__right__header">
 						<div class="right__header__menu">
 							<div class="header__menu__title">
-								<iframe id="content__title" src="../title/mainfood.jsp"></iframe>
+								<iframe id="content__title" src="../title/maintitle.jsp"></iframe>
 							</div>
 						</div>
 						<div class="right__header__right">
@@ -70,7 +69,7 @@
 						</div>
 					</div>
 					<div class="wrapper__right__body">
-						<iframe id="content__frame" src="../food/mainfood.jsp"></iframe>
+						<iframe id="content__frame" src="../order/startView.jsp"></iframe>
 					</div>
 					<div class="wrapper__right__footer"></div>
 				</div>

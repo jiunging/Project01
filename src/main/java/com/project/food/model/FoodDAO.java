@@ -3,7 +3,6 @@ package com.project.food.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import javax.naming.InitialContext;
@@ -67,18 +66,17 @@ public class FoodDAO {
 		return list;
 	}
 	
-	public void inSert(FoodVO vo) {
+	public void inSert(String name, String price) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		
-		String sql = "INSERT INTO ORDER_LIST VALUES(?, ?, ?)";
+		String sql = "INSERT INTO ORDER_LIST VALUES(?, ?, SEQ1.NEXTVAL)";
 		
 		try {
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, vo.getFoodname());
-			pstmt.setString(2, vo.getFoodprice());
-			pstmt.setString(3, vo.getFoodnum());
+			pstmt.setString(1, name);
+			pstmt.setString(2, price);
 			
 			pstmt.executeUpdate();
 			
@@ -89,6 +87,60 @@ public class FoodDAO {
 		}finally {
 			JdbcUtil.close(conn, pstmt, null);
 		}
+	}
+	
+	public ArrayList<BucketVO> foodList() {
+		ArrayList<BucketVO> list = new ArrayList<>();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from order_list";
+		
+		try {
+			conn = dataSource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				String order_Num = rs.getString("ORDER_NUM");
+				String food_Name = rs.getString("food_name");
+				String order_Price = rs.getString("order_price");
+				
+				BucketVO vo = new BucketVO(order_Num, food_Name, order_Price);
+				
+				list.add(vo);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn, pstmt, rs);
+		}
+		return list;
+		
+	}
+	
+	public void order () {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String sql = "DELETE FROM ORDER_LIST";
+		
+		try {
+			
+			conn = dataSource.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+			
+			System.out.println("order구문 실행 가능");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("order구문 실행 불가");
+		} finally {
+			JdbcUtil.close(conn, pstmt, null);
+		}
+				
 	}
 	
 	

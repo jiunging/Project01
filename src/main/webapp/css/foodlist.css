@@ -129,8 +129,10 @@ html, body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 800px;
+	width: 700px;
 	height: 520px;
+	overflow:auto;
+	white-space: nowrap;
 }
 
 .wrapper__right__bottom{
@@ -144,16 +146,26 @@ html, body{
 }
 
 .right__table{
+	table-layout: fixed;
 	border-collapse: collapse;
 	line-height: 1.5;
   	border: 1px solid #ccc;
   	margin: 20px 10px;
+  		
 }
 
 thead{
+	display:block;
 	border-right: 1px solid #ccc;
   	border-left: 1px solid #ccc;
  	background: lightsteelblue;
+}
+
+tbody{
+	display:block;
+    overflow-y: scroll;
+    height:520px;
+    width:100%;
 }
 
 th, td{
@@ -162,5 +174,14 @@ th, td{
 	text-align: center;
   	padding: 10px;
   	border-bottom: 1px solid #ccc;
+}
+
+.wrapper__right__cost{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	height: 100px;
+	width: 100%;
 }
 

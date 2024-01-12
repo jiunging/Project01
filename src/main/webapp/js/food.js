@@ -4,8 +4,9 @@
 
 */
 
+
 const menufood = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../order/order1.food?type=안주");
+    document.getElementById("content__frame").setAttribute("src" , "../order/order1.food?type=anju");
     document.getElementById("content__title").setAttribute("src" , "../title/mainfood.jsp");
     document.getElementById("menu__food").style = "color : black; background-color : white";
     document.getElementById("menu__stick").style = "color : white; background-color : #298eb5";
@@ -18,7 +19,7 @@ const menufood = () => {
 }
 
 const menustick = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/stick.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order2.food?type=stick")
     document.getElementById("content__title").setAttribute("src" , "../title/stick.jsp")
     document.getElementById("menu__stick").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -31,7 +32,7 @@ const menustick = () => {
 }
 
 const menufried = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/fried.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order3.food?type=fried")
     document.getElementById("content__title").setAttribute("src" , "../title/fried.jsp")
     document.getElementById("menu__fried").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -44,7 +45,7 @@ const menufried = () => {
 }
 
 const menupancake = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/pancake.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order4.food?type=pancake")
     document.getElementById("content__title").setAttribute("src" , "../title/pancake.jsp")
     document.getElementById("menu__pancake").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -57,7 +58,7 @@ const menupancake = () => {
 }
 
 const menurice = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/rice.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order5.food?type=rice")
     document.getElementById("content__title").setAttribute("src" , "../title/rice.jsp")
     document.getElementById("menu__rice").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -70,7 +71,7 @@ const menurice = () => {
 }
 
 const menudesert = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/desert.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order6.food?type=desert")
     document.getElementById("content__title").setAttribute("src" , "../title/desert.jsp")
     document.getElementById("menu__desert").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -83,7 +84,7 @@ const menudesert = () => {
 }
 
 const menubeverage = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/beverage.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order7.food?type=beverage")
     document.getElementById("content__title").setAttribute("src" , "../title/beverage.jsp")
     document.getElementById("menu__beverage").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";
@@ -96,7 +97,7 @@ const menubeverage = () => {
 }
 
 const menudrink = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/drink.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order8.food?type=drink")
     document.getElementById("content__title").setAttribute("src" , "../title/drink.jsp")
     document.getElementById("menu__drink").style = "color : black; background-color : white";
     document.getElementById("menu__food").style = "color : white; background-color : #298eb5";

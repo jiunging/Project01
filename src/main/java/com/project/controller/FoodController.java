@@ -1,7 +1,6 @@
 package com.project.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -10,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.project.food.model.BucketVO;
 import com.project.food.model.FoodVO;
 import com.project.food.serivce.FoodService;
 import com.project.food.serivce.FoodServiceImpl;
@@ -44,47 +44,113 @@ public class FoodController extends HttpServlet {
 
 		FoodService service = new FoodServiceImpl();
 
+		// 메인화면에서 장바구니 버튼 클릭
 		if (path.equals("/order/basket.food")) {
+			ArrayList<BucketVO> list = service.foodList(request, response);
+			request.setAttribute("list", list);
 			request.getRequestDispatcher("foodlist.jsp").forward(request, response);
-
-			// food.js --> 데이터 전달 --> 수신 및 list 추가
+		// mainfood.jsp 화면 표출 ( DB 데이터 출력 )
 		}else if (path.equals("/order/order1.food")) {
 
 			ArrayList<FoodVO> list = service.getList(request, response);
 			request.setAttribute("list", list);
-
 			System.out.println("수신 : " + list);
-			
 			request.getRequestDispatcher("../food/mainfood.jsp").forward(request, response);
-
-
-			// stick.jsp -->>> stick.jsp로 복귀
+			
+		// stick.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order2.food")) {
-			response.sendRedirect("../food/stick.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/stick.jsp").forward(request, response);
 
-			// pancake.jsp -->>> pancake.jsp로 복귀
-		} else if (path.equals("/order/order3.food")) {
-			response.sendRedirect("../food/pancake.jsp");
+		// fried.jsp 화면 표출 ( DB 데이터 출력 )
+		}else if (path.equals("/order/order3.food")) {
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/fried.jsp").forward(request, response);
 
-			// rice.jsp -->>> rise.jsp 복귀
+		// pancake.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order4.food")) {
-			response.sendRedirect("../food/rice.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/pancake.jsp").forward(request, response);
 
-			// fired.jsp -->>> fried.jsp로 복귀
+		// rice.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order5.food")) {
-			response.sendRedirect("../food/fried.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/rice.jsp").forward(request, response);
 
-			// desert.jsp -->>> desert.jsp로 복귀
+		// desert.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order6.food")) {
-			response.sendRedirect("../food/desert.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/desert.jsp").forward(request, response);
 
-			// beverage.jsp -->>> beverage.jsp로 복귀
+		// beverage.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order7.food")) {
-			response.sendRedirect("../food/beverage.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/beverage.jsp").forward(request, response);
 
-			// drink.jsp -->>> drink.jsp로 복귀
+		// drink.jsp 화면 표출 ( DB 데이터 출력 )
 		} else if (path.equals("/order/order8.food")) {
-			response.sendRedirect("../food/drink.jsp");
+			ArrayList<FoodVO> list = service.getList(request, response);
+			request.setAttribute("list", list);
+			System.out.println("수신 : " + list);
+			request.getRequestDispatcher("../food/drink.jsp").forward(request, response);
+		
+		// mainfood.jsp 음식선택 및 order_list table insert
+		}else if(path.equals("/order/insertForm1.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order1.food?type=" + request.getParameter("type"));
+		
+		// stick.jsp 음식 선택 및 order_list table insert	
+		}else if(path.equals("/order/insertForm2.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order2.food?type=" + request.getParameter("type"));
+			
+		// fried.jsp 음식 선택 및 order_list table insert
+		}else if(path.equals("/order/insertForm3.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order3.food?type=" + request.getParameter("type"));
+		
+		// pancake.jsp 음식 선택 및 order_list table insert
+		}else if(path.equals("/order/insertForm4.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order4.food?type=" + request.getParameter("type"));
+			
+		// rice.jsp 음식 선택 및 order_list table insert	
+		}else if(path.equals("/order/insertForm5.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order5.food?type=" + request.getParameter("type"));
+			
+		// desert.jsp 음식 선택 및 order_list table insert
+		}else if(path.equals("/order/insertForm6.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order6.food?type=" + request.getParameter("type"));
+			
+		// beverage.jsp 음식 선택 및 order_list table insert	
+		}else if(path.equals("/order/insertForm7.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order7.food?type=" + request.getParameter("type"));
+			
+		// drink.jsp 음식 선택 및 order_list table insert	
+		}else if(path.equals("/order/insertForm8.food")) {
+			service.inSert(request, response);
+			response.sendRedirect("order8.food?type=" + request.getParameter("type"));
+			
+			
+		}else if(path.equals("/order/deleteForm.food")) {
+			service.order(request, response);
+			System.out.println("delete controller 동작");
+			response.sendRedirect("../order/main.jsp");
 		}
 
 	}

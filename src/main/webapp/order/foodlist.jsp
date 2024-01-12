@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,9 @@
 							<div class="top__title__name"><a href="${pageContext.request.contextPath }/order/main.jsp">장바구니</a></div>
 						</div>
 						<div class="left__top__button">
-							<button class="top_button">주문하기</button>
+							<a href="deleteForm.food">
+								<input type="submit" class="top_button" >주문하기
+							</a>
 							<button class="top_button">취소하기</button>
 						</div>
 					</div>
@@ -37,15 +40,26 @@
 								</tr>
 							</thead>
 							<tbody>
-							<c:forEach var="vo" items="">
+							<c:forEach var="vo" items="${list }">
 								<tr>
-								    <td></td>
-								    <td></td>
-								    <td></td>
+								    <td>${vo.order_Num }</td>
+								    <td>${vo.food_Name }</td>
+								    <td>${vo.order_Price }</td>
 								</tr>
 							</c:forEach>	
 							</tbody>
 						</table>
+					</div>
+					<div class="wrapper__right__cost" style="font-size: 25px; font-weight: bold; color: red;">
+						결제 금액 : 
+						<c:set var="total" value="0"/>
+						<fmt:formatNumber var="total" value="${total }"/>
+						
+						<c:forEach var="vo" items="${list }">
+							<fmt:parseNumber var="num" value="${vo.order_Price}" />
+							<fmt:parseNumber var="total" value="${total + num }" />
+						</c:forEach>
+						<c:out value="${total }"/> 
 					</div>
 					<div class="wrapper__right__bottom">Copyright &copy; By Choi 2024.XX.XX~</div>
 				</div>
