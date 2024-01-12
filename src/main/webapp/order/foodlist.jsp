@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,7 @@
 				<div class="wrapper__left">
 					<div class="wrapper__left__top">
 						<div class="left__top__title">
-							<div class="top__title__name">장바구니</div>
+							<div class="top__title__name"><a href="${pageContext.request.contextPath }/order/main.jsp">장바구니</a></div>
 						</div>
 						<div class="left__top__button">
 							<button class="top_button">주문하기</button>
@@ -36,11 +37,13 @@
 								</tr>
 							</thead>
 							<tbody>
+							<c:forEach var="vo" items="">
 								<tr>
 								    <td></td>
 								    <td></td>
 								    <td></td>
 								</tr>
+							</c:forEach>	
 							</tbody>
 						</table>
 					</div>

@@ -5,8 +5,8 @@
 */
 
 const menufood = () => {
-    document.getElementById("content__frame").setAttribute("src" , "../food/mainfood.jsp")
-    document.getElementById("content__title").setAttribute("src" , "../title/mainfood.jsp")
+    document.getElementById("content__frame").setAttribute("src" , "../order/order1.food?type=안주");
+    document.getElementById("content__title").setAttribute("src" , "../title/mainfood.jsp");
     document.getElementById("menu__food").style = "color : black; background-color : white";
     document.getElementById("menu__stick").style = "color : white; background-color : #298eb5";
     document.getElementById("menu__fried").style = "color : white; background-color : #298eb5";

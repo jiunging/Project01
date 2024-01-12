@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=], initial-scale=1.0">
 <meta charset="UTF-8">
 <title>주문화면</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/css/main.css?after">
@@ -18,14 +19,30 @@
 						<div class="left__header__title">주문하기</div>
 					</div>
 					<div class="wrapper__left__body">
-						<div class="left__body__dish" id="menu__food" onclick="menufood()">안주</div>
-						<div class="left__body__dish" id="menu__stick" onclick="menustick()">꼬치</div>
-						<div class="left__body__dish" id="menu__fried" onclick="menufried()">튀김</div>
-						<div class="left__body__dish" id="menu__pancake" onclick="menupancake()">전</div>
-						<div class="left__body__dish" id="menu__rice" onclick="menurice()">밥&면</div>
-						<div class="left__body__dish" id="menu__desert" onclick="menudesert()">디저트</div>
-						<div class="left__body__dish" id="menu__beverage" onclick="menubeverage()">음료</div>
-						<div class="left__body__dish" id="menu__drink" onclick="menudrink()">주류</div>
+						<div class="left__body__dish" id="menu__food" onclick="menufood()">
+							<input type="hidden" name="category">안주
+						</div>
+						<div class="left__body__dish" id="menu__stick" onclick="menustick()">
+							<input type="hidden" name="category" >꼬치
+						</div>
+						<div class="left__body__dish" id="menu__fried" onclick="menufried()">
+							<input type="hidden" name="category" >튀김
+						</div>
+						<div class="left__body__dish" id="menu__pancake" onclick="menupancake()">
+							<input type="hidden" name="category" >전
+						</div>
+						<div class="left__body__dish" id="menu__rice" onclick="menurice()">
+							<input type="hidden" name="category" >밥&면
+						</div>
+						<div class="left__body__dish" id="menu__desert" onclick="menudesert()">
+							<input type="hidden" name="category" >디저트
+						</div>
+						<div class="left__body__dish" id="menu__beverage" onclick="menubeverage()">
+							<input type="hidden" name="category" >음료
+						</div>
+						<div class="left__body__dish" id="menu__drink" onclick="menudrink()">
+							<input type="hidden" name="category" >주류
+						</div>
 					</div>
 					<div class="wrapper__left__footer">
 						<button class="left__footer__button" id="menuCall" onclick="menuCall()">직원 호출</button>
