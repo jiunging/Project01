@@ -95,7 +95,7 @@ public class FoodDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		String sql = "select * from order_list";
+		String sql = "select * from order_list order by order_num";
 		
 		try {
 			conn = dataSource.getConnection();
@@ -127,7 +127,6 @@ public class FoodDAO {
 		String sql = "DELETE FROM ORDER_LIST";
 		
 		try {
-			
 			conn = dataSource.getConnection();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.executeUpdate();
@@ -140,7 +139,6 @@ public class FoodDAO {
 		} finally {
 			JdbcUtil.close(conn, pstmt, null);
 		}
-				
 	}
 	
 	
